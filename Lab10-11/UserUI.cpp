@@ -293,7 +293,6 @@ void UserUI::secdialog_add(string text, Observer* w)
 	QPushButton* okbtn = new QPushButton("OK");
 	layout->addWidget(okbtn);
 	connect(okbtn, &QPushButton::clicked, ws, [&, ws, text_box, w]() {
-		windows.notify(text_box->text().toStdString());
 		windows.removeObserver(ws);
 		ws->close();
 		stringstream ss;

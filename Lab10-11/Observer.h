@@ -9,15 +9,7 @@ using namespace std;
 class Observer : public QWidget
 {
 public:
-	virtual void update(string str) = 0;
-	string mesaj;
-};
-
-class somewindow : public Observer	
-{
-	void update(string str) override {
-		;
-	}
+	virtual void update() = 0;
 };
 
 class mainWindow : public Observer
